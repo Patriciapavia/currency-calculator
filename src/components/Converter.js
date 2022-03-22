@@ -81,6 +81,7 @@ const Converter = () => {
 										Amount
 									</label>
 									<input
+										name='amount'
 										type='number'
 										className='focus:outline-none focus:ring-1 focus:ring-green-500 focus:border-green-500 w-full border-2 rounded-sm min-h-50 pl-3 pr-10 py-2'
 										value={amount}
@@ -346,7 +347,7 @@ const Converter = () => {
 												</div>
 												<div className='flex gap-1 font-normal items-baseline'>
 													<p className='text-xl font-bold'>
-														{currencyData.data.clientBuyAmount}{' '}
+														{currencyData.data.clientBuyAmount} &nbsp;
 														{currencyData.data.clientBuyCurrency}
 													</p>
 												</div>
@@ -376,7 +377,9 @@ const Converter = () => {
 												<div className='flex gap-1 font-normal items-baseline'>
 													<p className='text-xl font-bold'>
 														{currencyData.data.clientBuyAmount -
-															(currencyData.data.clientBuyAmount * 0.5) / 100}
+															(currencyData.data.clientBuyAmount * 0.5) /
+																100}{' '}
+														&nbsp;
 														{currencyData.data.clientBuyCurrency}
 													</p>
 												</div>
@@ -386,6 +389,9 @@ const Converter = () => {
 								</div>
 								<div>
 									<button
+										name='submission'
+										id='submission'
+										disabled={!amount}
 										className={
 											!amount
 												? 'cursor-not-allowed inline-flex justify-center py-3 px-5 border border-transparent shadow-sm text-md font-bold rounded-md text-white bg-gray-300'

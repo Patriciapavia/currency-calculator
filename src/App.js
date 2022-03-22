@@ -1,9 +1,13 @@
 import './App.css';
 import Converter from './components/Converter';
+import { Provider } from 'react-redux';
+import store from './store';
 function App() {
 	return (
 		<div className='App'>
-			<Converter />
+			<Provider store={store}>
+				<Converter />
+			</Provider>
 		</div>
 	);
 }
