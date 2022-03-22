@@ -156,10 +156,7 @@ const Converter = () => {
 																						'ml-3 block truncate'
 																					)}
 																				>
-																					{list.currencies[0].code
-																						? list.currencies[0]?.code
-																						: list.name}
-																					,{/* {list.currencies.name} */}
+																					{list.name},
 																				</span>
 																			</div>
 
@@ -275,9 +272,7 @@ const Converter = () => {
 																						'ml-3 block truncate'
 																					)}
 																				>
-																					{list.currencies?.code
-																						? list.currencies[0]?.code
-																						: list.name}
+																					{list.name}
 																				</span>
 																			</div>
 
